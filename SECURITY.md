@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Patches are considered for the two versions under active development in the `main` and `dev` branches. Normally, `main` will contain the most recent release version under maintenance, and `dev` will be a prerelease version undergoing active development.
+Patches are considered for the two versions under active development in the `master` and `dev` branches. Normally, `master` will contain the most recent release version under maintenance, and `dev` will be a prerelease version undergoing active development.
 
 ## Reporting a Vulnerability
 
