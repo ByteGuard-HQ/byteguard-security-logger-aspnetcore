@@ -23,4 +23,8 @@
       <PackageReference Include="ByteGuard.SecurityLogger" Version="1.0.*" />
       <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
     </ItemGroup>
+    
+    <ItemGroup>
+      <Folder Include="Enrichers/" />
+    </ItemGroup>
 </Project>
