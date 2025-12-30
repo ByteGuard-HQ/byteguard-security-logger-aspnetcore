@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
         <Authors>ByteGuard Contributors, detilium</Authors>
-        <Description>TODO</Description>
+        <Description>ASP.NET Core-aware logging methods on top of ByteGuard.SecurityLogger</Description>
         <PackageProjectUrl>https://github.com/ByteGuard-HQ/byteguard-security-logger-aspnetcore</PackageProjectUrl>
         <RepositoryUrl>https://github.com/ByteGuard-HQ/byteguard-security-logger-aspnetcore</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
