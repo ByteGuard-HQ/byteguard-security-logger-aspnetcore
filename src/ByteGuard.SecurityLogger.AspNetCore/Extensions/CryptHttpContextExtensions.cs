@@ -16,14 +16,14 @@ public static class CryptHttpContextExtensions
     /// <param name="userId">User identificer.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogCryptDecryptFail(
+    public static void LogCryptDecryptFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogCryptDecryptFail(message, userId, httpContext, new(), args);
+        securityLogger.LogCryptDecryptFailFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -35,7 +35,7 @@ public static class CryptHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogCryptDecryptFail(
+    public static void LogCryptDecryptFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -57,14 +57,14 @@ public static class CryptHttpContextExtensions
     /// <param name="userId">User identificer.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogCryptEncryptFail(
+    public static void LogCryptEncryptFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogCryptEncryptFail(message, userId, httpContext, new(), args);
+        securityLogger.LogCryptEncryptFailFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -76,7 +76,7 @@ public static class CryptHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogCryptEncryptFail(
+    public static void LogCryptEncryptFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,

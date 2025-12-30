@@ -16,14 +16,14 @@ public static class SessionHttpContextExtensions
     /// <param name="userId">User identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSessionCreated(
+    public static void LogSessionCreatedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSessionCreated(message, userId, httpContext, new(), args);
+        securityLogger.LogSessionCreatedFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -35,7 +35,7 @@ public static class SessionHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSessionCreated(
+    public static void LogSessionCreatedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -57,14 +57,14 @@ public static class SessionHttpContextExtensions
     /// <param name="userId">User identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSessionRenewed(
+    public static void LogSessionRenewedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSessionRenewed(message, userId, httpContext, new(), args);
+        securityLogger.LogSessionRenewedFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -76,7 +76,7 @@ public static class SessionHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSessionRenewed(
+    public static void LogSessionRenewedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -99,7 +99,7 @@ public static class SessionHttpContextExtensions
     /// <param name="reason">Expiration reason.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSessionExpired(
+    public static void LogSessionExpiredFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -107,7 +107,7 @@ public static class SessionHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSessionExpired(message, userId, reason, httpContext, new(), args);
+        securityLogger.LogSessionExpiredFromHttp(message, userId, reason, httpContext, new(), args);
     }
 
     /// <summary>
@@ -120,7 +120,7 @@ public static class SessionHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSessionExpired(
+    public static void LogSessionExpiredFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -143,14 +143,14 @@ public static class SessionHttpContextExtensions
     /// <param name="userId">User identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSessionUseAfterExpire(
+    public static void LogSessionUseAfterExpireFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSessionUseAfterExpire(message, userId, httpContext, new(), args);
+        securityLogger.LogSessionUseAfterExpireFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -162,7 +162,7 @@ public static class SessionHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSessionUseAfterExpire(
+    public static void LogSessionUseAfterExpireFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,

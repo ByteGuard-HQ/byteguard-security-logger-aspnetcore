@@ -19,14 +19,14 @@ public static class SequenceHttpContextExtensions
     /// <param name="userId">User identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSequenceFail(
+    public static void LogSequenceFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSequenceFail(message, userId, httpContext, new(), args);
+        securityLogger.LogSequenceFailFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -41,7 +41,7 @@ public static class SequenceHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSequenceFail(
+    public static void LogSequenceFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,

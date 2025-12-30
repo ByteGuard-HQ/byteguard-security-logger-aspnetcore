@@ -16,14 +16,14 @@ public static class SystemHttpContextExtensions
     /// <param name="userId">User identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysStartup(
+    public static void LogSysStartupFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSysStartup(message, userId, httpContext, new(), args);
+        securityLogger.LogSysStartupFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -35,7 +35,7 @@ public static class SystemHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysStartup(
+    public static void LogSysStartupFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -57,14 +57,14 @@ public static class SystemHttpContextExtensions
     /// <param name="userId">User identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysShutdown(
+    public static void LogSysShutdownFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSysShutdown(message, userId, httpContext, new(), args);
+        securityLogger.LogSysShutdownFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -76,7 +76,7 @@ public static class SystemHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysShutdown(
+    public static void LogSysShutdownFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -98,14 +98,14 @@ public static class SystemHttpContextExtensions
     /// <param name="userId">User identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysRestart(
+    public static void LogSysRestartFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSysRestart(message, userId, httpContext, new(), args);
+        securityLogger.LogSysRestartFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -117,7 +117,7 @@ public static class SystemHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysRestart(
+    public static void LogSysRestartFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -139,14 +139,14 @@ public static class SystemHttpContextExtensions
     /// <param name="userId">User identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysCrash(
+    public static void LogSysCrashFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSysCrash(message, userId, httpContext, new(), args);
+        securityLogger.LogSysCrashFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -158,7 +158,7 @@ public static class SystemHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysCrash(
+    public static void LogSysCrashFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -181,7 +181,7 @@ public static class SystemHttpContextExtensions
     /// <param name="monitor">Monitor name.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysMonitorDisabled(
+    public static void LogSysMonitorDisabledFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -189,7 +189,7 @@ public static class SystemHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSysMonitorDisabled(message, userId, monitor, httpContext, new(), args);
+        securityLogger.LogSysMonitorDisabledFromHttp(message, userId, monitor, httpContext, new(), args);
     }
 
     /// <summary>
@@ -202,7 +202,7 @@ public static class SystemHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysMonitorDisabled(
+    public static void LogSysMonitorDisabledFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -226,7 +226,7 @@ public static class SystemHttpContextExtensions
     /// <param name="monitor">Monitor name.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysMonitorEnabled(
+    public static void LogSysMonitorEnabledFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -234,7 +234,7 @@ public static class SystemHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSysMonitorEnabled(message, userId, monitor, httpContext, new(), args);
+        securityLogger.LogSysMonitorEnabledFromHttp(message, userId, monitor, httpContext, new(), args);
     }
 
     /// <summary>
@@ -247,7 +247,7 @@ public static class SystemHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSysMonitorEnabled(
+    public static void LogSysMonitorEnabledFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,

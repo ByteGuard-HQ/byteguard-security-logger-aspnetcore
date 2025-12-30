@@ -16,14 +16,14 @@ public static class AuthnHttpContextExtensions
     /// <param name="userId">User identificer.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnLoginSuccess(
+    public static void LogAuthnLoginSuccessFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnLoginSuccess(message, userId, httpContext, new(), args);
+        securityLogger.LogAuthnLoginSuccessFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -35,7 +35,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnLoginSuccess(
+    public static void LogAuthnLoginSuccessFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -58,7 +58,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="retries">Number of retries before success.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnLoginSuccessAfterFail(
+    public static void LogAuthnLoginSuccessAfterFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -66,7 +66,7 @@ public static class AuthnHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnLoginSuccessAfterFail(message, userId, retries, httpContext, new(), args);
+        securityLogger.LogAuthnLoginSuccessAfterFailFromHttp(message, userId, retries, httpContext, new(), args);
     }
 
     /// <summary>
@@ -79,7 +79,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnLoginSuccessAfterFail(
+    public static void LogAuthnLoginSuccessAfterFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -102,14 +102,14 @@ public static class AuthnHttpContextExtensions
     /// <param name="userId">User identificer.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnLoginFail(
+    public static void LogAuthnLoginFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnLoginFail(message, userId, httpContext, new(), args);
+        securityLogger.LogAuthnLoginFailFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -121,7 +121,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnLoginFail(
+    public static void LogAuthnLoginFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -144,7 +144,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="maxLimit">Max limit of retries.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnLoginFailMax(
+    public static void LogAuthnLoginFailMaxFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -152,7 +152,7 @@ public static class AuthnHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnLoginFailMax(message, userId, maxLimit, httpContext, new(), args);
+        securityLogger.LogAuthnLoginFailMaxFromHttp(message, userId, maxLimit, httpContext, new(), args);
     }
 
     /// <summary>
@@ -165,7 +165,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnLoginFailMax(
+    public static void LogAuthnLoginFailMaxFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -189,7 +189,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="reason">Lock reason.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnLoginLock(
+    public static void LogAuthnLoginLockFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -197,7 +197,7 @@ public static class AuthnHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnLoginLock(message, userId, reason, httpContext, new(), args);
+        securityLogger.LogAuthnLoginLockFromHttp(message, userId, reason, httpContext, new(), args);
     }
 
     /// <summary>
@@ -210,7 +210,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnLoginLock(
+    public static void LogAuthnLoginLockFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -233,14 +233,14 @@ public static class AuthnHttpContextExtensions
     /// <param name="userId">User identificer.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnPasswordChange(
+    public static void LogAuthnPasswordChangeFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnPasswordChange(message, userId, httpContext, new(), args);
+        securityLogger.LogAuthnPasswordChangeFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -252,7 +252,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnPasswordChange(
+    public static void LogAuthnPasswordChangeFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -274,14 +274,14 @@ public static class AuthnHttpContextExtensions
     /// <param name="userId">User identificer.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnPasswordChangeFail(
+    public static void LogAuthnPasswordChangeFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnPasswordChangeFail(message, userId, httpContext, new(), args);
+        securityLogger.LogAuthnPasswordChangeFailFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -293,7 +293,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnPasswordChangeFail(
+    public static void LogAuthnPasswordChangeFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -320,7 +320,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="regionTwo">Second region.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnImpossibleTravel(
+    public static void LogAuthnImpossibleTravelFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -329,7 +329,7 @@ public static class AuthnHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnImpossibleTravel(message, userId, regionOne, regionTwo, httpContext, new(), args);
+        securityLogger.LogAuthnImpossibleTravelFromHttp(message, userId, regionOne, regionTwo, httpContext, new(), args);
     }
 
     /// <summary>
@@ -346,7 +346,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnImpossibleTravel(
+    public static void LogAuthnImpossibleTravelFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -371,7 +371,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="entitlements">Entitlements (e.g. create, read, update, etc.).</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnTokenCreated(
+    public static void LogAuthnTokenCreatedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -379,7 +379,7 @@ public static class AuthnHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnTokenCreated(message, userId, entitlements, httpContext, new(), args);
+        securityLogger.LogAuthnTokenCreatedFromHttp(message, userId, entitlements, httpContext, new(), args);
     }
 
     /// <summary>
@@ -392,7 +392,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnTokenCreated(
+    public static void LogAuthnTokenCreatedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -416,7 +416,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="tokenId">Token identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnTokenRevoked(
+    public static void LogAuthnTokenRevokedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -424,7 +424,7 @@ public static class AuthnHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnTokenRevoked(message, userId, tokenId, httpContext, new(), args);
+        securityLogger.LogAuthnTokenRevokedFromHttp(message, userId, tokenId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -437,11 +437,11 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnTokenRevoked(
+    public static void LogAuthnTokenRevokedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
-        string tokenId,
+        string? tokenId,
         HttpContext httpContext,
         SecurityEventMetadata metadata,
         params object?[] args)
@@ -461,7 +461,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="tokenId">Token identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnTokenReuse(
+    public static void LogAuthnTokenReuseFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -469,7 +469,7 @@ public static class AuthnHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnTokenReuse(message, userId, tokenId, httpContext, new(), args);
+        securityLogger.LogAuthnTokenReuseFromHttp(message, userId, tokenId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -482,11 +482,11 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnTokenReuse(
+    public static void LogAuthnTokenReuseFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
-        string tokenId,
+        string? tokenId,
         HttpContext httpContext,
         SecurityEventMetadata metadata,
         params object?[] args)
@@ -505,14 +505,14 @@ public static class AuthnHttpContextExtensions
     /// <param name="userId">User identificer.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnTokenDelete(
+    public static void LogAuthnTokenDeleteFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthnTokenDelete(message, userId, httpContext, new(), args);
+        securityLogger.LogAuthnTokenDeleteFromHttp(message, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -524,7 +524,7 @@ public static class AuthnHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthnTokenDelete(
+    public static void LogAuthnTokenDeleteFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,

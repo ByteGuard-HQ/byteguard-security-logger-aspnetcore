@@ -19,7 +19,7 @@ public static class UploadHttpContextExtensions
     /// <param name="fileType">File type.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUploadComplete(
+    public static void LogUploadCompleteFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -28,7 +28,7 @@ public static class UploadHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogUploadComplete(message, userId, fileName, fileType, httpContext, new(), args);
+        securityLogger.LogUploadCompleteFromHttp(message, userId, fileName, fileType, httpContext, new(), args);
     }
 
     /// <summary>
@@ -42,7 +42,7 @@ public static class UploadHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUploadComplete(
+    public static void LogUploadCompleteFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -68,7 +68,7 @@ public static class UploadHttpContextExtensions
     /// <param name="to">New storage location.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUploadStored(
+    public static void LogUploadStoredFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -77,7 +77,7 @@ public static class UploadHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogUploadStored(message, userId, from, to, httpContext, new(), args);
+        securityLogger.LogUploadStoredFromHttp(message, userId, from, to, httpContext, new(), args);
     }
 
     /// <summary>
@@ -91,7 +91,7 @@ public static class UploadHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUploadStored(
+    public static void LogUploadStoredFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -119,7 +119,7 @@ public static class UploadHttpContextExtensions
     /// <param name="level">Log level.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUploadValidation(
+    public static void LogUploadValidationFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -130,7 +130,7 @@ public static class UploadHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogUploadValidation(message, userId, filename, validationType, result, level, httpContext, new(), args);
+        securityLogger.LogUploadValidationFromHttp(message, userId, filename, validationType, result, level, httpContext, new(), args);
     }
 
     /// <summary>
@@ -146,7 +146,7 @@ public static class UploadHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUploadValidation(
+    public static void LogUploadValidationFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -173,7 +173,7 @@ public static class UploadHttpContextExtensions
     /// <param name="fileId">File identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUploadDelete(
+    public static void LogUploadDeleteFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -181,7 +181,7 @@ public static class UploadHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogUploadDelete(message, userId, fileId, httpContext, new(), args);
+        securityLogger.LogUploadDeleteFromHttp(message, userId, fileId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -194,7 +194,7 @@ public static class UploadHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUploadDelete(
+    public static void LogUploadDeleteFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,

@@ -19,7 +19,7 @@ public static class PrivilegeHttpContextExtensions
     /// <param name="toLevel">New privilege level.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogPrivilegePermissionsChanged(
+    public static void LogPrivilegePermissionsChangedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -29,7 +29,7 @@ public static class PrivilegeHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogPrivilegePermissionsChanged(message, userId, resource, fromLevel, toLevel, httpContext, new(), args);
+        securityLogger.LogPrivilegePermissionsChangedFromHttp(message, userId, resource, fromLevel, toLevel, httpContext, new(), args);
     }
 
     /// <summary>
@@ -44,7 +44,7 @@ public static class PrivilegeHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogPrivilegePermissionsChanged(
+    public static void LogPrivilegePermissionsChangedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,

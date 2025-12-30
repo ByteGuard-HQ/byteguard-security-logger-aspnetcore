@@ -17,7 +17,7 @@ public static class ExcessHttpContextExtensions
     /// <param name="max">Maximum allowed requests.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogExcessRateLimitExceeded(
+    public static void LogExcessRateLimitExceededFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -25,7 +25,7 @@ public static class ExcessHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogExcessRateLimitExceeded(message, userId, max, httpContext, new(), args);
+        securityLogger.LogExcessRateLimitExceededFromHttp(message, userId, max, httpContext, new(), args);
     }
 
     /// <summary>
@@ -38,7 +38,7 @@ public static class ExcessHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogExcessRateLimitExceeded(
+    public static void LogExcessRateLimitExceededFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,

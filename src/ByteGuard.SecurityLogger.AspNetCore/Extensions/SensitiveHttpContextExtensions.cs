@@ -17,7 +17,7 @@ public static class SensitiveHttpContextExtensions
     /// <param name="resource">Resource identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSensitiveCreate(
+    public static void LogSensitiveCreateFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -25,7 +25,7 @@ public static class SensitiveHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSensitiveCreate(message, userId, resource, httpContext, new(), args);
+        securityLogger.LogSensitiveCreateFromHttp(message, userId, resource, httpContext, new(), args);
     }
 
     /// <summary>
@@ -38,7 +38,7 @@ public static class SensitiveHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSensitiveCreate(
+    public static void LogSensitiveCreateFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -62,7 +62,7 @@ public static class SensitiveHttpContextExtensions
     /// <param name="resource">Resource identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSensitiveRead(
+    public static void LogSensitiveReadFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -70,7 +70,7 @@ public static class SensitiveHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSensitiveRead(message, userId, resource, httpContext, new(), args);
+        securityLogger.LogSensitiveReadFromHttp(message, userId, resource, httpContext, new(), args);
     }
 
     /// <summary>
@@ -83,7 +83,7 @@ public static class SensitiveHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSensitiveRead(
+    public static void LogSensitiveReadFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -107,7 +107,7 @@ public static class SensitiveHttpContextExtensions
     /// <param name="resource">Resource identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSensitiveUpdate(
+    public static void LogSensitiveUpdateFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -115,7 +115,7 @@ public static class SensitiveHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSensitiveUpdate(message, userId, resource, httpContext, new(), args);
+        securityLogger.LogSensitiveUpdateFromHttp(message, userId, resource, httpContext, new(), args);
     }
 
     /// <summary>
@@ -128,7 +128,7 @@ public static class SensitiveHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSensitiveUpdate(
+    public static void LogSensitiveUpdateFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -152,7 +152,7 @@ public static class SensitiveHttpContextExtensions
     /// <param name="resource">Resource identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSensitiveDelete(
+    public static void LogSensitiveDeleteFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -160,7 +160,7 @@ public static class SensitiveHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogSensitiveDelete(message, userId, resource, httpContext, new(), args);
+        securityLogger.LogSensitiveDeleteFromHttp(message, userId, resource, httpContext, new(), args);
     }
 
     /// <summary>
@@ -173,7 +173,7 @@ public static class SensitiveHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogSensitiveDelete(
+    public static void LogSensitiveDeleteFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,

@@ -17,7 +17,7 @@ public static class AuthzHttpContextExtensions
     /// <param name="resource">Resource identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthzFail(
+    public static void LogAuthzFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -25,7 +25,7 @@ public static class AuthzHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthzFail(message, userId, resource, httpContext, new(), args);
+        securityLogger.LogAuthzFailFromHttp(message, userId, resource, httpContext, new(), args);
     }
 
     /// <summary>
@@ -38,7 +38,7 @@ public static class AuthzHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthzFail(
+    public static void LogAuthzFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -63,7 +63,7 @@ public static class AuthzHttpContextExtensions
     /// <param name="to">New authorization.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthzChange(
+    public static void LogAuthzChangeFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -72,7 +72,7 @@ public static class AuthzHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthzChange(message, userId, to, from, httpContext, new(), args);
+        securityLogger.LogAuthzChangeFromHttp(message, userId, to, from, httpContext, new(), args);
     }
 
     /// <summary>
@@ -86,7 +86,7 @@ public static class AuthzHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthzChange(
+    public static void LogAuthzChangeFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -111,7 +111,7 @@ public static class AuthzHttpContextExtensions
     /// <param name="event">Event description.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthzAdmin(
+    public static void LogAuthzAdminFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -119,7 +119,7 @@ public static class AuthzHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogAuthzAdmin(message, userId, @event, httpContext, new(), args);
+        securityLogger.LogAuthzAdminFromHttp(message, userId, @event, httpContext, new(), args);
     }
 
     /// <summary>
@@ -132,7 +132,7 @@ public static class AuthzHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogAuthzAdmin(
+    public static void LogAuthzAdminFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,

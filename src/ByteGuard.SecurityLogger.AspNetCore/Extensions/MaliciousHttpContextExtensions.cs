@@ -17,7 +17,7 @@ public static class MaliciousHttpContextExtensions
     /// <param name="useragent">User agent.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogMaliciousExcess404(
+    public static void LogMaliciousExcess404FromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? ipAddress,
@@ -25,7 +25,7 @@ public static class MaliciousHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogMaliciousExcess404(message, ipAddress, useragent, httpContext, new(), args);
+        securityLogger.LogMaliciousExcess404FromHttp(message, ipAddress, useragent, httpContext, new(), args);
     }
 
     /// <summary>
@@ -38,7 +38,7 @@ public static class MaliciousHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogMaliciousExcess404(
+    public static void LogMaliciousExcess404FromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? ipAddress,
@@ -63,7 +63,7 @@ public static class MaliciousHttpContextExtensions
     /// <param name="useragent">User agent.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogMaliciousExtraneous(
+    public static void LogMaliciousExtraneousFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? ipAddress,
@@ -72,7 +72,7 @@ public static class MaliciousHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogMaliciousExtraneous(message, ipAddress, inputName, useragent, httpContext, new(), args);
+        securityLogger.LogMaliciousExtraneousFromHttp(message, ipAddress, inputName, useragent, httpContext, new(), args);
     }
 
     /// <summary>
@@ -86,7 +86,7 @@ public static class MaliciousHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogMaliciousExtraneous(
+    public static void LogMaliciousExtraneousFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? ipAddress,
@@ -112,7 +112,7 @@ public static class MaliciousHttpContextExtensions
     /// <param name="useragent">User agent.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogMaliciousAttackTool(
+    public static void LogMaliciousAttackToolFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? ipAddress,
@@ -121,7 +121,7 @@ public static class MaliciousHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogMaliciousAttackTool(message, ipAddress, toolName, useragent, httpContext, new(), args);
+        securityLogger.LogMaliciousAttackToolFromHttp(message, ipAddress, toolName, useragent, httpContext, new(), args);
     }
 
     /// <summary>
@@ -135,7 +135,7 @@ public static class MaliciousHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogMaliciousAttackTool(
+    public static void LogMaliciousAttackToolFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? ipAddress,
@@ -161,7 +161,7 @@ public static class MaliciousHttpContextExtensions
     /// <param name="useragent">User agent.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogMaliciousCors(
+    public static void LogMaliciousCorsFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? ipAddress,
@@ -170,7 +170,7 @@ public static class MaliciousHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogMaliciousCors(message, ipAddress, referrer, useragent, httpContext, new(), args);
+        securityLogger.LogMaliciousCorsFromHttp(message, ipAddress, referrer, useragent, httpContext, new(), args);
     }
 
     /// <summary>
@@ -184,7 +184,7 @@ public static class MaliciousHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogMaliciousCors(
+    public static void LogMaliciousCorsFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? ipAddress,
@@ -209,7 +209,7 @@ public static class MaliciousHttpContextExtensions
     /// <param name="useragent">User agent.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogMaliciousDirectReference(
+    public static void LogMaliciousDirectReferenceFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? ipAddress,
@@ -217,7 +217,7 @@ public static class MaliciousHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogMaliciousDirectReference(message, ipAddress, useragent, httpContext, new(), args);
+        securityLogger.LogMaliciousDirectReferenceFromHttp(message, ipAddress, useragent, httpContext, new(), args);
     }
 
     /// <summary>
@@ -230,7 +230,7 @@ public static class MaliciousHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogMaliciousDirectReference(
+    public static void LogMaliciousDirectReferenceFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? ipAddress,

@@ -18,7 +18,7 @@ public static class UserHttpContextExtensions
     /// <param name="attributes">New user attributes.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUserCreated(
+    public static void LogUserCreatedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -27,7 +27,7 @@ public static class UserHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogUserCreated(message, userId, newUserId, attributes, httpContext, new(), args);
+        securityLogger.LogUserCreatedFromHttp(message, userId, newUserId, attributes, httpContext, new(), args);
     }
 
     /// <summary>
@@ -41,7 +41,7 @@ public static class UserHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUserCreated(
+    public static void LogUserCreatedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -67,7 +67,7 @@ public static class UserHttpContextExtensions
     /// <param name="attributes">User attributes.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUserUpdated(
+    public static void LogUserUpdatedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -76,7 +76,7 @@ public static class UserHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogUserUpdated(message, userId, onUserId, attributes, httpContext, new(), args);
+        securityLogger.LogUserUpdatedFromHttp(message, userId, onUserId, attributes, httpContext, new(), args);
     }
 
     /// <summary>
@@ -90,7 +90,7 @@ public static class UserHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUserUpdated(
+    public static void LogUserUpdatedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -115,7 +115,7 @@ public static class UserHttpContextExtensions
     /// <param name="onUserId">On user identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUserArchived(
+    public static void LogUserArchivedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -123,7 +123,7 @@ public static class UserHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogUserArchived(message, userId, onUserId, httpContext, new(), args);
+        securityLogger.LogUserArchivedFromHttp(message, userId, onUserId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -136,7 +136,7 @@ public static class UserHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUserArchived(
+    public static void LogUserArchivedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -160,7 +160,7 @@ public static class UserHttpContextExtensions
     /// <param name="onUserId">On user identifier.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUserDeleted(
+    public static void LogUserDeletedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,
@@ -168,7 +168,7 @@ public static class UserHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogUserDeleted(message, userId, onUserId, httpContext, new(), args);
+        securityLogger.LogUserDeletedFromHttp(message, userId, onUserId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -181,7 +181,7 @@ public static class UserHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogUserDeleted(
+    public static void LogUserDeletedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? userId,

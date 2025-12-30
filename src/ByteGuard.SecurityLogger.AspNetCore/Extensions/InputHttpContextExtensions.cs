@@ -17,7 +17,7 @@ public static class InputHttpContextExtensions
     /// <param name="userId">User identificer.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogInputValidationFailed(
+    public static void LogInputValidationFailedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         IEnumerable<string>? fields,
@@ -25,7 +25,7 @@ public static class InputHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogInputValidationFailed(message, fields, userId, httpContext, new(), args);
+        securityLogger.LogInputValidationFailedFromHttp(message, fields, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -38,7 +38,7 @@ public static class InputHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogInputValidationFailed(
+    public static void LogInputValidationFailedFromHttp(
         this SecurityLogger securityLogger,
         string message,
         IEnumerable<string>? fields,
@@ -62,7 +62,7 @@ public static class InputHttpContextExtensions
     /// <param name="userId">User identificer.</param>
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogInputValidationDiscreteFail(
+    public static void LogInputValidationDiscreteFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? field,
@@ -70,7 +70,7 @@ public static class InputHttpContextExtensions
         HttpContext httpContext,
         params object?[] args)
     {
-        securityLogger.LogInputValidationDiscreteFail(message, field, userId, httpContext, new(), args);
+        securityLogger.LogInputValidationDiscreteFailFromHttp(message, field, userId, httpContext, new(), args);
     }
 
     /// <summary>
@@ -83,7 +83,7 @@ public static class InputHttpContextExtensions
     /// <param name="httpContext">HttpContext.</param>
     /// <param name="metadata">Security event metadata.</param>
     /// <param name="args">An object array that contains zero or more objects to format.</param>
-    public static void LogInputValidationDiscreteFail(
+    public static void LogInputValidationDiscreteFailFromHttp(
         this SecurityLogger securityLogger,
         string message,
         string? field,
