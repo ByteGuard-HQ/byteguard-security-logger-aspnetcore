@@ -1,4 +1,3 @@
-using ByteGuard.SecurityLogger.Configuration;
 using Microsoft.AspNetCore.Http;
 
 namespace ByteGuard.SecurityLogger.AspNetCore.Enrichers;
