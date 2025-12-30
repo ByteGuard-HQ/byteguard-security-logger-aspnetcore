@@ -2,7 +2,7 @@
 
 `ByteGuard.SecurityLogger.AspNetCore` adds ASP.NET Core-aware logging methods on top of [`ByteGuard.SecurityLogger`](https://github.com/ByteGuard-HQ/byteguard-security-logger).
 
-It exposes the same OWASP Logging Vocabulary event methods as the core package, but with an `HttpContext`-based variant suffixed with **`FromHttp`** (e.g. `LogAuthnLoginSuccessFromHttp(...)`). These methods use `HttpContext` to automatically populate the logging scope fields according to the OWASP Logging Vocabulary format and the `SecurityEventMetadata` model in the core package
+It exposes the same OWASP Logging Vocabulary event methods as the core package, but with an `HttpContext`-based variant suffixed with **`FromHttp`** (_e.g. `LogAuthnLoginSuccessFromHttp(...)`_). These methods use `HttpContext` to automatically populate the logging scope fields according to the OWASP Logging Vocabulary format and the `SecurityEventMetadata` model in the core package
 
 ## Getting Started
 
@@ -21,12 +21,12 @@ dotnet add package ByteGuard.SecurityLogger.AspNetCore
 Log your security events and populate the security event metadata from the `HttpContext`:
 
 ```csharp
-public class MyService
+public class MyClass
 {
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly ILogger<MyController> _logger;
 
-    public MyService(
+    public MyClass(
         IHttpContextAccessor httpContextAccessor,
         ILogger<MyController> logger)
     {
@@ -46,10 +46,10 @@ public class MyService
         var securityLogger = _logger.AsSecurityLogger(config);
 
         // Log you security event
-        var user = _httpContextAccessor.HttpContext.User.Identity.Name;
+        var userId = //...
         securityLogger.AuthnLoginSuccessFromHttp(
             "User {UserId} successfully logged in.",
-            userId: user,
+            userId: userId,
             httpContext, _httpContextAccessor.HttpContext
             args: user.Id
         );
@@ -72,7 +72,7 @@ The following properties of the `SecurityEventMetadata` are populated via the `H
 - `RequestUri`
 - `RequestMethod`
 
-These map into the same structured scope keys that the core package uses via `SecurityEventMetadata`, so your logs remain consistent whether you log from web requests or from background services.
+These map into the same structured scope keys that the core package uses via the `SecurityEventMetadata` class, so your logs remain consistent whether you log from HTTP requests or from background services.
 
 ### Predefined values in metadata
 
